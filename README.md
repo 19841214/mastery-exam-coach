@@ -4,6 +4,27 @@
 
 ---
 
+## 🚀 工作坊一鍵匯入與使用指引 (Workshop Quick-Start)
+
+本專案支援多平台即時匯入。若您參與研習工作坊或自學，可依據您使用的 AI 平台選擇對應方式：
+
+### 方式一：在 Gemini Spark / 支援 Skill 的 AI Agent 中一鍵安裝（推薦）
+若您使用 Gemini Spark 或支援 Skill 機制的 AI Agent，只需將此儲存庫網址貼給 AI：
+> **「請參考此 GitHub 儲存庫 `https://github.com/19841214/mastery-exam-coach` 中的 `SKILL.md`，為我建立並儲存名為 `mastery-exam-coach` 的 Skill。」**
+
+AI 即會自動讀取 [SKILL.md](SKILL.md) 並在您的帳號中啟用該技能！
+
+### 方式二：在 Gemini 自訂 Gem (Custom Gem) 中一鍵匯入
+1. 打開本專案的 [gem_instructions.md](gem_instructions.md) 檔案。
+2. 點選複製該檔案中的完整系統指令（System Prompt）。
+3. 前往 Gemini 網頁介面，點選左側「**Gem 管理工具 (Gem Manager)**」➔「**新增 Gem (New Gem)**」。
+4. 將名稱設為「**精熟備考教練**」，並將指令直接貼入「**操作說明 (Instructions)**」中，點選儲存即可立即對話！
+
+### 方式三：在 Claude Projects 或 ChatGPT Custom GPTs 中使用
+複製 [gem_instructions.md](gem_instructions.md) 的內容，貼入 Claude Project 的 Project Instructions 或 ChatGPT Custom GPT 的 Instructions 欄位。
+
+---
+
 ## 📌 專案簡介
 
 `Mastery Exam Coach` 是一套以 **精熟學習法 (Mastery Learning)** 與 **間隔重複理論 (Spaced Retrieval)** 為核心架構的自動化學習教練系統。
@@ -61,7 +82,7 @@
 - **雙軌作答辨識與自動謄寫 (Dual-Track Auto-Transcription)**
   - 支援學員於頂部表格填答，亦允許直接在題幹旁作答或標註；系統自動將筆記與答案謄寫至頂部表格。
 - **確定性程式化選項洗牌協議 (Deterministic Shuffling Protocol)**
-  - 透過程式腳本執行確定性隨機洗牌，強制達成 A/B/C/D 正解均勻分佈，並嚴格檢驗避免連續 3 題相同選項，徹底消除 LLM 位置偏誤 (Position Bias)。
+  - 透過 [scripts/shuffle_options.py](scripts/shuffle_options.py) 執行確定性隨機洗牌，強制達成 A/B/C/D 正解均勻分佈，並嚴格檢驗避免連續 3 題相同選項，徹底消除 LLM 位置偏誤 (Position Bias)。
 - **純淨排版與零 $ 符號規範 (Zero-Dollar-Sign Policy)**
   - 杜絕原始 LaTeX 與 `$` 符號排版，公式與變數全面採用乾淨純文字與 Unicode 符號（如 μ、σ、Σ、IQR），避免跨平台解析亂碼。
 - **對話式生活化白話講義與漸進式名詞鷹架 (Progressive Scaffolding)**
@@ -71,21 +92,15 @@
 
 ---
 
-## 📁 建議目錄結構
+## 📁 目錄結構
 
 ```text
 mastery-exam-coach/
-├── README.md
-├── docs/
-│   ├── architecture.md       # 四階段架構與核心設計
-│   ├── syllabus-template.md  # 學習總綱範本
-│   └── rubric-standards.md   # 80分精熟與評分規準
-├── scripts/
-│   ├── shuffle_options.py    # 確定性選項洗牌與均勻分佈檢驗腳本
-│   └── sheet_formatter.py    # Google Sheets 錯題本欄位配置
-└── prompts/
-    ├── lecture_generator.md  # 白話講義生成提示詞
-    └── exam_evaluator.md     # 雙軌批改與詳解提示詞
+├── README.md              # 專案首頁與工作坊一鍵匯入指引
+├── SKILL.md               # Gemini Spark / AI Agent 標準技能定義檔
+├── gem_instructions.md    # Gemini Custom Gem / GPTs 一鍵複製指令
+└── scripts/
+    └── shuffle_options.py # 確定性選項洗牌與均勻分佈驗證腳本
 ```
 
 ---
