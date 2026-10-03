@@ -6,22 +6,13 @@
 
 ## 🚀 工作坊一鍵匯入與使用指引 (Workshop Quick-Start)
 
-本專案支援多平台即時匯入。若您參與研習工作坊或自學，可依據您使用的 AI 平台選擇對應方式：
+本專案專為具備雲端工作區自動化與 Python 執行環境的 **Gemini Spark (AI Agent)** 量身打造。學員無須手動複製設定繁瑣的提示詞，只要將此儲存庫網址提供給 Gemini Spark 即可一鍵安裝：
 
-### 方式一：在 Gemini Spark / 支援 Skill 的 AI Agent 中一鍵安裝（推薦）
-若您使用 Gemini Spark 或支援 Skill 機制的 AI Agent，只需將此儲存庫網址貼給 AI：
+### 一鍵安裝步驟
+將以下指令直接傳送給您的 **Gemini Spark**：
 > **「請參考此 GitHub 儲存庫 `https://github.com/19841214/mastery-exam-coach` 中的 `SKILL.md`，為我建立並儲存名為 `mastery-exam-coach` 的 Skill。」**
 
-AI 即會自動讀取 [SKILL.md](SKILL.md) 並在您的帳號中啟用該技能！
-
-### 方式二：在 Gemini 自訂 Gem (Custom Gem) 中一鍵匯入
-1. 打開本專案的 [gem_instructions.md](gem_instructions.md) 檔案。
-2. 點選複製該檔案中的完整系統指令（System Prompt）。
-3. 前往 Gemini 網頁介面，點選左側「**Gem 管理工具 (Gem Manager)**」➔「**新增 Gem (New Gem)**」。
-4. 將名稱設為「**精熟備考教練**」，並將指令直接貼入「**操作說明 (Instructions)**」中，點選儲存即可立即對話！
-
-### 方式三：在 Claude Projects 或 ChatGPT Custom GPTs 中使用
-複製 [gem_instructions.md](gem_instructions.md) 的內容，貼入 Claude Project 的 Project Instructions 或 ChatGPT Custom GPT 的 Instructions 欄位。
+AI 即會自動解析並將這個具備完整工具操作權限的備考教練啟用至您的帳號中！
 
 ---
 
@@ -96,9 +87,8 @@ AI 即會自動讀取 [SKILL.md](SKILL.md) 並在您的帳號中啟用該技能�
 
 ```text
 mastery-exam-coach/
-├── README.md              # 專案首頁與工作坊一鍵匯入指引
-├── SKILL.md               # Gemini Spark / AI Agent 標準技能定義檔
-├── gem_instructions.md    # Gemini Custom Gem / GPTs 一鍵複製指令
+├── README.md              # 專案首頁與 Gemini Spark 一鍵安裝指引
+├── SKILL.md               # Gemini Spark AI Agent 標準技能定義檔
 └── scripts/
     └── shuffle_options.py # 確定性選項洗牌與均勻分佈驗證腳本
 ```
