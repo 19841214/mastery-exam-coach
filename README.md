@@ -6,13 +6,17 @@
 
 ## 🚀 工作坊一鍵匯入與使用指引 (Workshop Quick-Start)
 
-本專案專為具備雲端工作區自動化與 Python 執行環境的 **Gemini Spark (AI Agent)** 量身打造。學員無須手動複製設定繁瑣的提示詞，只要將此儲存庫網址提供給 Gemini Spark 即可一鍵安裝：
+本專案專為具備雲端工作區自動化與 Python 執行環境的 **Gemini Spark (AI Agent)** 量身打造。學員無須手動複製設定繁瑣的提示詞，採用**雙軌一鍵安裝 (Dual-Track Quick-Start)** 機制，無論您的 AI 環境是否具備 GitHub 工具整合，皆能 100% 順暢安裝：
 
-### 一鍵安裝步驟
-將以下指令直接傳送給您的 **Gemini Spark**：
-> **「請參考此 GitHub 儲存庫 `https://github.com/19841214/mastery-exam-coach` 中的 `SKILL.md`，為我建立並儲存名為 `mastery-exam-coach` 的 Skill。」**
+### 雙軌安裝步驟與指令
 
-AI 即會自動解析並將這個具備完整工具操作權限的備考教練啟用至您的帳號中！
+#### 軌道 A：環境已連接 GitHub 工具 / GitHub MCP（最推薦）
+若您的 Agent 已啟用 GitHub 工具，可直接在對話中呼叫官方 API 讀取結構化專案：
+> **「請使用 @GitHub 讀取 `19841214/mastery-exam-coach` 中的 `SKILL.md`，為我建立並儲存名為 `mastery-exam-coach` 的 Skill。」**
+
+#### 軌道 B：一般網頁瀏覽模式（Raw 純文字直連，免 MCP）
+若您的 Agent 未連接 GitHub MCP 或使用一般網頁搜尋/讀取工具，請直接提供以下 **Raw 原始純文字網址**（可徹底繞過 GitHub SPA 動態渲染與反爬蟲限制，保證讀取成功）：
+> **「請讀取此 Raw 原始檔網址 `https://raw.githubusercontent.com/19841214/mastery-exam-coach/main/SKILL.md`，為我建立並儲存名為 `mastery-exam-coach` 的 Skill。」**
 
 ---
 
@@ -87,7 +91,7 @@ AI 即會自動解析並將這個具備完整工具操作權限的備考教練�
 
 ```text
 mastery-exam-coach/
-├── README.md              # 專案首頁與 Gemini Spark 一鍵安裝指引
+├── README.md              # 專案首頁與雙軌一鍵安裝指引
 ├── SKILL.md               # Gemini Spark AI Agent 標準技能定義檔
 └── scripts/
     └── shuffle_options.py # 確定性選項洗牌與均勻分佈驗證腳本
